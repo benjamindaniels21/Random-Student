@@ -1,5 +1,5 @@
 //List of Students
-let studentArray;
+let studentArray = [];
 
 const firstPeriod = [
   "Ainsley A",
@@ -108,7 +108,7 @@ const seventhPeriod = [
   "Olivia W",
 ];
 
-studentArray = firstPeriod; //initialize array as period 1
+studentArray = [...firstPeriod]; //initialize array as period 1
 
 // Shuffling Algorithm
 const shuffle = (array) => {
@@ -122,35 +122,35 @@ shuffle(studentArray); // Shuffle our student Array
 
 const student = document.getElementById("student");
 const btn = document.getElementById("btn");
+const clearBtn = document.getElementById("clear-btn");
 let studentIndex = 0;
 const classDropdown = document.getElementById("period-number");
 
 //Change the Period Number and Shuffle students
 classDropdown.addEventListener("change", () => {
-  // console.log(classDropdown.value);
   switch (classDropdown.value) {
     case "1st":
-      studentArray = firstPeriod;
+      studentArray = [...firstPeriod];
       shuffle(studentArray);
       break;
     case "2nd":
-      studentArray = secondPeriod;
+      studentArray = [...secondPeriod];
       shuffle(studentArray);
       break;
     case "3rd":
-      studentArray = thirdPeriod;
+      studentArray = [...thirdPeriod];
       shuffle(studentArray);
       break;
     case "4th":
-      studentArray = fourthPeriod;
+      studentArray = [...fourthPeriod];
       shuffle(studentArray);
       break;
     case "6nd":
-      studentArray = sixthPeriod;
+      studentArray = [...sixthPeriod];
       shuffle(studentArray);
       break;
     case "7th":
-      studentArray = seventhPeriod;
+      studentArray = [...seventhPeriod];
       shuffle(studentArray);
       break;
   }
@@ -163,6 +163,36 @@ btn.addEventListener("click", () => {
   } else {
     student.innerHTML = studentArray[0];
     studentArray.shift();
-    console.log(studentArray);
+  }
+});
+
+//Clear Student Name
+clearBtn.addEventListener("click", () => {
+  student.innerHTML = "";
+  switch (classDropdown.value) {
+    case "1st":
+      studentArray = [...firstPeriod];
+      shuffle(studentArray);
+      break;
+    case "2nd":
+      studentArray = [...secondPeriod];
+      shuffle(studentArray);
+      break;
+    case "3rd":
+      studentArray = [...thirdPeriod];
+      shuffle(studentArray);
+      break;
+    case "4th":
+      studentArray = [...fourthPeriod];
+      shuffle(studentArray);
+      break;
+    case "6nd":
+      studentArray = [...sixthPeriod];
+      shuffle(studentArray);
+      break;
+    case "7th":
+      studentArray = [...seventhPeriod];
+      shuffle(studentArray);
+      break;
   }
 });

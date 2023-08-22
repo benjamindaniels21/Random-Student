@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
   <title>Document</title>
+
 </head>
 <body>
-  <div id="2">
+  <div id="main-content">
+    <h1 class="title">Random Student</h1>
     <label for="period-number" id="1">Choose a class</label>
     <select name="period-number" id="period-number">
       <option value="1st">1st</option>
@@ -16,11 +19,11 @@
       <option value="6th">6th</option>
       <option value="7th">7th</option>
     </select>
+    
+    <h2 id="student"></h2>
+    <button id="btn">New Student</button>
+    <button id="clear-btn">Clear</button>
   </div>
-
-  <h1>Random Student</h1>
-  <h2 id="student"></h2>
-  <button id="btn">New Student</button>
 
   <script src="./script.js"></script>
 </body>

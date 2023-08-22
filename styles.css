@@ -1,0 +1,32 @@
+html{
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+  background-repeat: no-repeat;
+}
+
+#main-content{
+  margin-top: 40px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 50%;
+  height: 40vh;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* text-align: center; */
+}
+
+.title {
+  text-align: center;
+  margin-top: 10px;
+}
+
+button{
+  /* margin-left: 10%; */
+}
