@@ -12,7 +12,7 @@ const firstPeriod = [
   "Milla M",
   "Joey M",
   "Rider T",
-  "Nick S.",
+  "Nick S",
 ];
 
 const secondPeriod = [
